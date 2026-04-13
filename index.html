@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法考备考倒计时工具</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- 页面标题 -->
+        <header class="page-header">
+            <h1 class="page-title">法考备考倒计时工具</h1>
+        </header>
+
+        <!-- 倒计时区域 -->
+        <section class="countdown-section">
+            <p class="countdown-label">距离2026年法考客观题</p>
+            <p class="countdown-number" id="countdown">还有 517 天 8 小时</p>
+        </section>
+
+        <!-- 励志语录区域 -->
+        <section class="quote-section">
+            <div class="divider"></div>
+            <p class="quote-text" id="quote">星光不问赶路人<br>时光不负有心人</p>
+        </section>
+
+        <!-- 打卡区域 -->
+        <section class="tasks-section">
+            <h2 class="section-title">今日学习打卡</h2>
+
+            <!-- 鼓励提示（默认隐藏）-->
+            <div class="encouragement" id="encouragement" style="display: none;">
+                <p class="encouragement-icon">🎉</p>
+                <p class="encouragement-text">太棒了！今日目标全部完成！</p>
+                <p class="encouragement-sub">你的坚持，终将美好！✨</p>
+            </div>
+
+            <!-- 空状态（默认显示）-->
+            <div class="empty-state" id="emptyState">
+                <p class="empty-icon">📚</p>
+                <p class="empty-text">添加今天的学习计划吧</p>
+                <p class="empty-hint">开始今天的备考之旅</p>
+            </div>
+
+            <!-- 任务列表 -->
+            <div class="task-list" id="taskList">
+                <!-- 任务项将通过 JS 动态渲染 -->
+            </div>
+
+            <!-- 添加表单 -->
+            <div class="add-form">
+                <input type="text" class="input" id="taskInput" placeholder="输入学习任务...">
+                <button class="button" id="addButton">添加</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>

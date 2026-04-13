@@ -1,0 +1,439 @@
+/* ===================================
+   CSS 变量系统
+   =================================== */
+:root {
+    /* 主色 */
+    --color-primary: #FF6B6B;
+    --color-primary-dark: #EE5A52;
+    --color-primary-light: #FFE8E8;
+
+    /* 辅助色 */
+    --color-secondary: #4A90E2;
+    --color-secondary-dark: #357ABD;
+    --color-secondary-light: #E3F2FD;
+
+    /* 中性色 */
+    --color-gray-900: #1A1A1A;
+    --color-gray-700: #4A4A4A;
+    --color-gray-500: #9E9E9E;
+    --color-gray-300: #E0E0E0;
+    --color-gray-100: #F5F5F5;
+    --color-white: #FFFFFF;
+
+    /* 功能色 */
+    --color-success: #4CAF50;
+    --color-warning: #FF9800;
+    --color-info: #2196F3;
+
+    /* 背景色 */
+    --color-bg: #FAF8F5;
+    --color-bg-subtle: #FFFDF9;
+
+    /* 字号 */
+    --font-size-h1: 18px;
+    --font-size-countdown: 48px;
+    --font-size-countdown-label: 16px;
+    --font-size-quote: 18px;
+    --font-size-section: 20px;
+    --font-size-task: 15px;
+    --font-size-button: 14px;
+    --font-size-caption: 12px;
+
+    /* 间距 */
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-s: 12px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-xxxl: 64px;
+
+    /* 圆角 */
+    --radius-card: 12px;
+    --radius-button: 8px;
+    --radius-input: 8px;
+    --radius-task: 8px;
+
+    /* 阴影 */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===================================
+   全局样式
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+                 "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+                 "Microsoft YaHei", "思源黑体", sans-serif;
+    font-size: var(--font-size-body);
+    line-height: 1.5;
+    color: var(--color-gray-700);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===================================
+   页面容器
+   =================================== */
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xxl);
+    background-color: var(--color-bg);
+    min-height: 100vh;
+}
+
+/* ===================================
+   页面标题
+   =================================== */
+.page-header {
+    text-align: center;
+    margin-bottom: var(--spacing-l);
+}
+
+.page-title {
+    font-size: var(--font-size-h1);
+    font-weight: 600;
+    color: var(--color-gray-900);
+}
+
+/* ===================================
+   倒计时区域
+   =================================== */
+.countdown-section {
+    background-color: var(--color-bg-subtle);
+    padding: var(--spacing-xxxl) var(--spacing-xl);
+    text-align: center;
+    border-bottom: 1px solid var(--color-gray-300);
+    margin-bottom: var(--spacing-l);
+}
+
+.countdown-label {
+    font-size: var(--font-size-countdown-label);
+    font-weight: 500;
+    color: var(--color-gray-500);
+    margin-bottom: var(--spacing-m);
+}
+
+.countdown-number {
+    font-size: var(--font-size-countdown);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-shadow: 0 2px 4px rgba(255, 107, 107, 0.2);
+    letter-spacing: 2px;
+}
+
+/* ===================================
+   励志语录区域
+   =================================== */
+.quote-section {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.divider {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-gray-300), transparent);
+    margin: 0 auto var(--spacing-m);
+}
+
+.quote-text {
+    font-size: var(--font-size-quote);
+    color: var(--color-gray-700);
+    line-height: 1.6;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ===================================
+   打卡区域
+   =================================== */
+.tasks-section {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+
+.section-title {
+    font-size: var(--font-size-section);
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ===================================
+   鼓励提示
+   =================================== */
+.encouragement {
+    background-color: var(--color-primary-light);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-card);
+    padding: var(--spacing-m);
+    text-align: center;
+    margin-bottom: var(--spacing-m);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.encouragement-icon {
+    font-size: 32px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.encouragement-text {
+    font-size: var(--font-size-task);
+    font-weight: 500;
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-xs);
+}
+
+.encouragement-sub {
+    font-size: var(--font-size-task);
+    color: var(--color-gray-700);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   空状态
+   =================================== */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-xxl) var(--spacing-xl);
+}
+
+.empty-icon {
+    font-size: 48px;
+    opacity: 0.5;
+    margin-bottom: var(--spacing-m);
+}
+
+.empty-text {
+    font-size: var(--font-size-task);
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-xs);
+}
+
+.empty-hint {
+    font-size: 13px;
+    color: var(--color-gray-500);
+}
+
+/* ===================================
+   任务列表
+   =================================== */
+.task-list {
+    margin-bottom: var(--spacing-l);
+}
+
+.task-item {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--radius-task);
+    padding: var(--spacing-m);
+    margin-bottom: var(--spacing-s);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-m);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: none;
+}
+
+.task-item:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+.task-item.completed {
+    background-color: var(--color-secondary-light);
+    border-color: var(--color-secondary);
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-gray-500);
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: none;
+}
+
+.task-checkbox:hover {
+    border-color: var(--color-secondary);
+}
+
+.task-item.completed .task-checkbox {
+    background-color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.task-item.completed .task-checkbox::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.task-content {
+    flex: 1;
+    font-size: var(--font-size-task);
+    color: var(--color-gray-700);
+    cursor: pointer;
+    transition: none;
+}
+
+.task-content:hover {
+    color: var(--color-secondary);
+}
+
+.task-item.completed .task-content {
+    color: var(--color-gray-500);
+    text-decoration: line-through;
+}
+
+.task-delete {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: none;
+    flex-shrink: 0;
+}
+
+.task-delete:hover {
+    opacity: 1;
+    color: var(--color-error);
+}
+
+/* ===================================
+   添加表单
+   =================================== */
+.add-form {
+    display: flex;
+    gap: var(--spacing-s);
+}
+
+.input {
+    flex: 1;
+    height: 44px;
+    padding: var(--spacing-s);
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--radius-input);
+    font-size: var(--font-size-body);
+    color: var(--color-gray-700);
+    background-color: var(--color-white);
+    transition: none;
+}
+
+.input::placeholder {
+    color: var(--color-gray-500);
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid var(--color-secondary);
+    padding: calc(var(--spacing-s) - 1px);
+}
+
+.button {
+    height: 44px;
+    padding: 0 var(--spacing-l);
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-button);
+    font-size: var(--font-size-button);
+    font-weight: 500;
+    cursor: pointer;
+    transition: none;
+    white-space: nowrap;
+}
+
+.button:hover {
+    background-color: var(--color-secondary-dark);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+/* ===================================
+   响应式设计
+   =================================== */
+@media (min-width: 769px) {
+    .page-container {
+        box-shadow: var(--shadow-card);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        padding: var(--spacing-l);
+    }
+
+    .countdown-number {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-container {
+        padding: var(--spacing-m);
+    }
+
+    .countdown-section {
+        padding: var(--spacing-xxl) var(--spacing-m);
+    }
+
+    .countdown-number {
+        font-size: 32px;
+    }
+
+    .tasks-section {
+        padding: var(--spacing-m);
+    }
+
+    .add-form {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+/* ===================================
+   辅助类
+   =================================== */
+.hidden {
+    display: none !important;
+}
