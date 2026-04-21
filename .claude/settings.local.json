@@ -5,7 +5,9 @@
       "Bash(npm view *)",
       "Bash(timeout 5 npm run dev)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial commit: 法考倒计时PWA应用 *)",
+      "Bash(npm run *)"
     ]
   }
 }

@@ -5,7 +5,7 @@ export default defineConfig({
   // GitHub Pages 部署路径（请根据您的仓库名修改）
   // 如果仓库名是 'LawExamApp'，则 base 为 '/LawExamApp/'
   // 如果是用户/用户名.github.io，则 base 为 '/'
-  base: '/LawExamApp/',
+  base: '/exam-countdown/',
 
   plugins: [
     VitePWA({
@@ -19,7 +19,7 @@ export default defineConfig({
         background_color: '#F5E6D3',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/LawExamApp/',
+        start_url: '/exam-countdown/',
         icons: [
           {
             src: '/icon.svg',
