@@ -22,13 +22,13 @@ export default defineConfig({
         start_url: '/exam-countdown/',
         icons: [
           {
-            src: '/icon.svg',
+            src: '/exam-countdown/icon.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
             purpose: 'any maskable'
           },
           {
-            src: '/icon.svg',
+            src: '/exam-countdown/icon.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any maskable'
