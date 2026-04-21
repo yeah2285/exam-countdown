@@ -4,27 +4,24 @@
  */
 
 import { getDaysIndex } from './date.js';
+import poemsData from '../data/poems.json';
 
 // 诗词数据缓存
-let poemsData = null;
+let poemsCache = null;
 
 /**
  * 加载诗词数据
  * @returns {Promise<Array>} 诗词数组
  */
 async function loadPoemsData() {
-  if (poemsData) {
-    return poemsData;
+  if (poemsCache) {
+    return poemsCache;
   }
 
   try {
-    const response = await fetch('/src/data/poems.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    poemsData = data.poems;
-    return poemsData;
+    // 直接使用导入的JSON数据
+    poemsCache = poemsData.poems;
+    return poemsCache;
   } catch (error) {
     console.error('加载诗词数据失败:', error);
     return null;
