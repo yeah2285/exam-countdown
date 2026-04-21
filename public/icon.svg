@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 宣纸背景 -->
+  <rect width="512" height="512" fill="#F5E6D3"/>
+
+  <!-- 故宫红圆圈 -->
+  <circle cx="256" cy="256" r="200" fill="#8B1A1A" opacity="0.1"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#C91F37" stroke-width="8"/>
+
+  <!-- 书法风格的"考"字简化 -->
+  <g fill="#8B1A1A" transform="translate(156, 106)">
+    <!-- 简化的书法笔触 -->
+    <path d="M100 0 L100 350 M40 50 L160 50 M60 100 L140 100 M40 150 L160 150 M60 200 L140 200 M40 250 L160 250 M100 250 L100 350 M60 350 L140 350"
+          stroke="#8B1A1A"
+          stroke-width="12"
+          stroke-linecap="round"
+          fill="none"/>
+  </g>
+
+  <!-- 小印章 -->
+  <rect x="360" y="360" width="80" height="80" fill="#C91F37" rx="8"/>
+  <text x="400" y="410"
+        font-family="serif"
+        font-size="36"
+        fill="#F5E6D3"
+        text-anchor="middle">诗</text>
+</svg>

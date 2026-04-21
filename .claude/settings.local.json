@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm view *)",
+      "Bash(timeout 5 npm run dev)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

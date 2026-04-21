@@ -1,0 +1,32 @@
+{
+  "name": "law-exam-countdown",
+  "version": "0.1.0",
+  "description": "2026年法考倒计时PWA - 极简倒计时与每日诗词",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
+    "lint": "echo 'Linting not configured yet'",
+    "test:pwa": "lhci autorun",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "pwa",
+    "法考",
+    "倒计时",
+    "诗词"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^5.4.0",
+    "vite-plugin-pwa": "^1.2.0",
+    "vitest": "^2.0.0"
+  }
+}
