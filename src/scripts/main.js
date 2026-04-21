@@ -3,6 +3,11 @@
  * 初始化倒计时和诗词模块
  */
 
+// 导入CSS样式（让Vite自动处理）
+import '../styles/variables.css';
+import '../styles/reset.css';
+import '../styles/main.css';
+
 import { initCountdown } from './countdown.js';
 import { initPoems } from './poems.js';
 
