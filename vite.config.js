@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg'],
+      includeAssets: ['icon.svg', 'icons/*.svg'],
       manifest: {
         name: '法考倒计时 2026',
         short_name: '法考倒计时',
@@ -22,16 +22,28 @@ export default defineConfig({
         start_url: '/exam-countdown/',
         icons: [
           {
-            src: '/exam-countdown/icon.svg',
+            src: '/exam-countdown/icons/icon-192.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
-            purpose: 'any maskable'
+            purpose: 'any'
           },
           {
-            src: '/exam-countdown/icon.svg',
+            src: '/exam-countdown/icons/icon-512.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
-            purpose: 'any maskable'
+            purpose: 'any'
+          },
+          {
+            src: '/exam-countdown/icons/icon-192.svg',
+            sizes: '192x192',
+            type: 'image/svg+xml',
+            purpose: 'maskable'
+          },
+          {
+            src: '/exam-countdown/icons/icon-512.svg',
+            sizes: '512x512',
+            type: 'image/svg+xml',
+            purpose: 'maskable'
           }
         ]
       },
